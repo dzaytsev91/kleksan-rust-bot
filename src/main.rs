@@ -15,10 +15,10 @@ async fn main() {
 #[derive(BotCommands, Clone)]
 #[command(rename_rule = "lowercase")]
 enum Command {
-    /// Display this text.
+    /// Помощь
     #[command(aliases = ["h", "?"])]
     Help,
-    /// Handle a username.
+    /// Узнать куда колоть
     #[command(alias = "w")]
     Where,
 }
