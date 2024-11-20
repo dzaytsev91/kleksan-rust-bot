@@ -10,3 +10,10 @@ pretty_env_logger = "0.4"
 tokio = { version =  "1.8", features = ["rt-multi-thread", "macros"] }
 chrono = "0.4.38"
 
+[profile.release]
+# v This is now used by default, if not provided
+strip = true
+opt-level = "z"
+lto = true
+codegen-units = 1
+panic = "abort"
